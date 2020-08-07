@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #9b9dd4;
+    color: #030303;
+}
+
+.container {
+    border-radius: 40px;
+    background: linear-gradient(145deg, #a6a8e3, #8c8dbf);
+    box-shadow:  5px 5px 10px #7e7fac, 
+             -5px -5px 10px #b8bbfc;
+     width: 500px;
+     height: 520px;
+     padding: 5px 30px;        
+}
+
+.heading h1 {
+    text-align: center;    
+}
+
+.name {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.name input {
+    width: 300px;
+
+}
+
+.name input:nth-child(2) {
+    margin-left: 1.5rem;
+}
+
+
+.check, .sex {
+    display: flex;
+    align-items: center;
+}
+
+.sex {
+    justify-content: center;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+input {
+    display: block;
+    font-weight: bold;
+}
+
+input:not([type=checkbox]) {
+    margin-bottom: .5rem;
+    padding: .25rem .5rem;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+}
+
+input:focus, select:focus {
+    outline: none;
+}
+
+label, p, span {
+    font-weight: bold;
+}
+
+.dept label {
+    display: block;
+}
+
+.dept {
+    margin-bottom: 1rem;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=submit] {
+    padding: .5rem 1rem;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+input[type=checkbox], input[type=date], select {
+    cursor: pointer;
+}
