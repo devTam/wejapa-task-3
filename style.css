@@ -107,7 +107,7 @@ input[type=checkbox], input[type=date], select {
     cursor: pointer;
 }
 
-.passbox {
+.passbox, #genderbox {
     font-size: 12px;
     font-weight: bold;
     color: red;

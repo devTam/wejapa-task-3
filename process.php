@@ -81,26 +81,56 @@
 
 .header {
   text-align: center;
-  color: #fff;
+  /* color: #fff; */
   font-weight: bold;
 }
+
+ul {
+  list-style-type: none;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  font-weight: bold;
+}
+
+
 </style>
 <body>
   <div class="header">
-    <h1><?php echo "Hey ". $_POST['firstName'] . ", "?>do you like confetti on your fav color? &#128513; &#128513; &#128513;</h1>
+    <h1>Congratulations! &#128513;</h1>
   </div>
-       <div class="container">
-         <div class="confetti"></div>
-         <div class="confetti"></div>
-         <div class="confetti"></div>
-         <div class="confetti"></div>
-         <div class="confetti"></div>
-         <div class="confetti"></div>
-         <div class="confetti"></div>
-         <div class="confetti"></div>
-         <div class="confetti"></div>
-         <div class="confetti"></div>
-       </div>
+  
+    <ul>
+      <li>First Name: <?php echo $_POST['firstName']?></li>
+      <li>Last Name: <?php echo $_POST['lastName']?></li>
+      <li>Email: <?php echo $_POST['email']?></li>
+      <li>Date of birth: <?php echo $_POST['dob']?></li>
+      <li>Gender: <?php 
+        if (isset($_POST['male'])) {
+          echo "male";
+        } else {
+          echo "female";
+        }
+      ?></li>
+      <li>Department: <?php echo $_POST['dept']?></li>
+    </ul>
+
+
+  
+  <div class="container">
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+  </div>
+  
   
 </body>
 </html>
