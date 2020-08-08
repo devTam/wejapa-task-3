@@ -93,8 +93,24 @@ input[type=submit] {
     font-weight: bold;
     border-radius: 6px;
     cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+input[type=submit]:hover { 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);   
+}
+input[type=submit]:active { 
+    transform: translateY(2px);
+}
 input[type=checkbox], input[type=date], select {
     cursor: pointer;
+}
+
+.passbox {
+    font-size: 12px;
+    color: red;
+}
+
+.error {
+    border: 2px solid red!important;
 }

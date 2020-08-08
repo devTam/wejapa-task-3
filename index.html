@@ -15,16 +15,17 @@
             <p>Please fill the form if you would like to see a magic trick &#128513;</p>
         </div>
 
-        <form action="./process.php" method="POST">
+        <form action="./process.php" method="POST" id="form">
             <div class="name">
-                <input type="text" name="firstName" placeholder="First Name">
-                <input type="text" name="lastName" placeholder="Last Name">
+                <input type="text" name="firstName" placeholder="First Name" id="first-name">
+                <input type="text" name="lastName" placeholder="Last Name" id="last-name">
             </div>
-            <input type="text" name="email" placeholder="Email">
-            <input type="password" name="password" placeholder="Password">
+            <input type="text" name="email" placeholder="Email" id="email">
+            <input type="password" name="password" placeholder="Password" id="password">
+            <div class="passbox"></div>
             <div class="dob">
                 <label for="dob">Date of birth:</label>
-                <input type="date" name="dob" id="dob">
+                <input type="date" name="dob" id="dob" id="dob">
             </div>
             <div class="gender">
                 <span>Gender: </span>
@@ -43,22 +44,25 @@
                 </div>
             </div>
             <div class="color">
-                <input type="text" name="color" placeholder="Favorite Color">
+                <label for="color">Favourite color:</label>
+                <input type="color" name="color" id="color">
             </div>
             <div class="dept">
                 <label for="dept">Department:</label>
                 <select name="dept" id="dept">
                     <option value="IT">IT</option>
                     <option value="HR">HR</option>
-                    <option value="Stuff">Stuff</option>
+                    <option value="Others">Others</option>
                 </select>
             </div>
             <div class="submit">
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" id="submit" disabled>
             </div>
 
         </form>
     </div>
+
+    <script src="script.js"></script>
     
 </body>
 </html>
