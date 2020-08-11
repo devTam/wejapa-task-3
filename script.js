@@ -59,6 +59,18 @@ const validatePassword = (pass) => {
     }
 }
 
+// ValidateName
+
+const ValidateName = (name) => {
+    if (name.value === "") {
+        name.classList.add('error');
+        return false;
+    } else {
+        name.classList.remove('error');
+        return true;
+    }
+}
+
 const male = document.getElementById('male');
 const female = document.getElementById('female');
 const genderbox = document.getElementById('genderbox');
@@ -74,20 +86,22 @@ const validateGender = () => {
     }
 }
 
-    form.addEventListener('input', e => {
-        if (e.target.value === "") {
-            e.target.classList.add('error');
-        } else {
-            e.target.classList.remove('error');
-        }
+form.addEventListener('submit', e => {
+    // if (e.target.value === "") {
+    //     e.target.classList.add('error');
+    // } else {
+    //     e.target.classList.remove('error');
+    // }
 
-        //enable button if all tests pass 
-        if (firstName.value !== "" && lastName.value !== "" && validateEmail(email.value) && validatePassword(password.value) && validateGender()) {
-            submit.disabled = false;
-        } else {
-            submit.disabled = true;
-            e.preventDefault();
-        }
+    //enable button if all tests pass 
+    if (ValidateName(firstName) && ValidateName(lastName) && validateEmail(email.value) && validatePassword(password.value) && validateGender()) {
+        // e.target.classList.remove('error');
+        // submit.disabled = false;
+    } else {
+        // submit.disabled = true;
+        e.preventDefault();
+        // e.target.classList.add('error');
+    }
 
 
-    });
+});
