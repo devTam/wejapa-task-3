@@ -58,7 +58,7 @@
                 </select>
             </div>
             <div class="submit">
-                <input type="submit" value="Submit" id="submit" disabled>
+                <input type="submit" value="Submit" id="submit">
             </div>
 
         </form>
